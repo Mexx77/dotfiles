@@ -21,3 +21,8 @@ yay google-chrome
 
 ## Config
 localectl --no-convert set-x11-keymap de pc105 nodeadkeys
+
+## Optional
+xbindkeys
+synclient TouchpadOff=1
+source $HOME/.zshrc.local

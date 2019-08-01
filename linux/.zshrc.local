@@ -1,0 +1,27 @@
+# I use the zsh configuration maintained by the grml linux project.
+# it is possible to install the grml zsh configuration like this:
+#
+# wget -O .zshrc http://git.grml.org/f/grml-etc-core/etc/zsh/zshrc
+#
+# This file contains my additions and modifications to that configuration.
+
+# ALIASES
+alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
+alias sudo='sudo -E env "PATH=$PATH"'
+
+# ENVIRONMENT
+export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:bin/java::")
+
+source $HOME/.aliases
+
+GOPATH=~/go
+GOROOT=/usr/local/go
+
+PATH="$GOPATH:$PATH"         
+
+#source <(oc completion zsh)
+#source <(kubectl completion zsh)
+
+#ssh-agent zsh
+#export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+#gpgconf --launch gpg-agent
