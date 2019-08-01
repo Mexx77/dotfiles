@@ -13,6 +13,7 @@ rsync
 rxvt-unicode
 stow
 sudo
+ttf-dejavu
 ttf-inconsolata
 xf86-video-intel
 xfsprogs
