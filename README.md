@@ -34,6 +34,7 @@ localectl --no-convert set-x11-keymap de pc105 nodeadkeys
 
 ## Optional
 ```
+For jetbrains-toolbox: sudo pacman -S fuse2
 xbindkeys
 synclient TouchpadOff=1
 source $HOME/.zshrc.local
