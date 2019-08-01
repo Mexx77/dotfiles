@@ -1,21 +1,13 @@
 # Max Dotfiles
 This is a collection of configs for my Arch Linux setup.
 
-## General
+## Packages
 ```
-sudo pacman -S xorg-server arandr physlock \
- nvim git xorg-xbacklight stow feh
-```
-
-## Xmonad
-```
-sudo pacman -S ttf-dejavu ttf-inconsolata \
- xmonad xmonad-contrib xmobar haskell-http dmenu
+pacman -S --needed - < pkglist.txt
 ```
 
-## Shell
+## Oh my zsh
 ```
-sudo pacman -S rxvt-unicode
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
@@ -27,15 +19,13 @@ makepkg -si
 yay google-chrome
 ```
 
-## Config
+## German keyboard
 ```
 localectl --no-convert set-x11-keymap de pc105 nodeadkeys
 ```
 
 ## Optional
 ```
-For jetbrains-toolbox: sudo pacman -S fuse2
 xbindkeys
 synclient TouchpadOff=1
-source $HOME/.zshrc.local
 ```
