@@ -4,7 +4,7 @@ This is a collection of configs for my Arch Linux setup.
 ## General
 ```
 sudo pacman -S xorg-server arandr physlock \
- nvim git xorg-xbacklight stow
+ nvim git xorg-xbacklight stow feh
 ```
 
 ## Xmonad
