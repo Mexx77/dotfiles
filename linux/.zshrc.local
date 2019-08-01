@@ -5,10 +5,10 @@
 #
 # This file contains my additions and modifications to that configuration.
 
-GOPATH=~/go
-GOROOT=/usr/local/go
+#GOPATH=~/go
+#GOROOT=/usr/local/go
 
-PATH="$GOPATH:$PATH:$HOME/bin" 
+#PATH="$GOPATH:$PATH:$HOME/bin" 
 
 # ALIASES
 alias bat='upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state|to\ full|percentage"'
