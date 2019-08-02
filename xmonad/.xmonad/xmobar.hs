@@ -1,4 +1,4 @@
-Config { font = "xft:inconsolata:size=10:antialias=true"
+Config { font = "xft:DejaVu Sans Mono for Powerline:size=9"
        , bgColor = "#002b36"
        , fgColor = "#657b83"
        , position = Top

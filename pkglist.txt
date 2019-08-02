@@ -1,4 +1,5 @@
 arandr
+aws-cli
 dmenu
 feh
 fuse2
@@ -7,6 +8,7 @@ neovim
 netctl
 networkmanager
 nextcloud-client
+npm
 openssh
 physlock
 rsync
@@ -15,6 +17,7 @@ stow
 sudo
 ttf-dejavu
 ttf-inconsolata
+unzip
 xf86-video-intel
 xfsprogs
 xmobar

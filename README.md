@@ -24,6 +24,11 @@ yay google-chrome
 localectl --no-convert set-x11-keymap de pc105 nodeadkeys
 ```
 
+## awsp
+```
+sudo npm install -g awsp
+```
+
 ## Optional
 ```
 xbindkeys

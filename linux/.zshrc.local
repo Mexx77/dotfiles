@@ -21,7 +21,11 @@ source $HOME/.aliases
 
 #source <(oc completion zsh)
 #source <(kubectl completion zsh)
+source /usr/bin/aws_zsh_completer.sh
 
 #ssh-agent zsh
 #export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
 #gpgconf --launch gpg-agent
+
+#powerline-daemon -q
+#. /usr/lib/python3.7/site-packages/powerline/bindings/zsh/powerline.zsh
