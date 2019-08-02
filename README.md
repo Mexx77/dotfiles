@@ -34,3 +34,6 @@ sudo npm install -g awsp
 xbindkeys
 synclient TouchpadOff=1
 ```
+
+## TODO
+- include bin in dotfile repo

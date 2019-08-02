@@ -99,5 +99,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+source $HOME/.aliases
+source /usr/bin/aws_zsh_completer.sh
 
-source $HOME/.zshrc.local
+# Hide default username
+DEFAULT_USER=max
+prompt_context(){}
+
+#ssh-agent zsh
+#export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+#gpgconf --launch gpg-agent
