@@ -4,6 +4,7 @@ dmenu
 feh
 fuse2
 git
+htop
 neovim
 netctl
 networkmanager
