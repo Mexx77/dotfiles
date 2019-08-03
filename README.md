@@ -17,6 +17,7 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 yay google-chrome
+cd .. && rm -rf yay
 ```
 
 ## German keyboard
