@@ -6,6 +6,7 @@ dmenu
 feh
 fuse2
 git
+gnupg
 htop
 jq
 neovim
