@@ -106,6 +106,10 @@ source /usr/bin/aws_zsh_completer.sh
 DEFAULT_USER=max
 prompt_context(){}
 
-#ssh-agent zsh
-#export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
-#gpgconf --launch gpg-agent
+# Use gpg-agent for SSH authentication
+unset SSH_AGENT_PID
+if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
+  export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
+fi
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye >/dev/null
