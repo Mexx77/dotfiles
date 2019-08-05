@@ -25,9 +25,14 @@ cd .. && rm -rf yay
 localectl --no-convert set-x11-keymap de pc105 nodeadkeys
 ```
 
-## awsp
+## awsp AWS profile changer
 ```
 sudo npm install -g awsp
+```
+
+## urxvt font size changer
+```
+yay urxvt-resize-font.git
 ```
 
 ## Optional

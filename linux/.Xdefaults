@@ -12,7 +12,7 @@ URxvt*loginShell: true
 Urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 URxvt*saveLines: 50000
 URxvt*termName: rxvt-unicode
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,resize-font
 URxvt.urlLauncher: google-chrome 
 URxvt.matcher.button: 1
 
