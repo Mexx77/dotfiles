@@ -38,6 +38,8 @@ yay urxvt-resize-font.git
 ## wps office
 ```
 yay wps-office
+yay wps-office-extension-german-dictionary
+yay ttf-wps-fonts
 ```
 
 ## Optional
