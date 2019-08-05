@@ -35,11 +35,13 @@ sudo npm install -g awsp
 yay urxvt-resize-font.git
 ```
 
+## wps office
+```
+yay wps-office
+```
+
 ## Optional
 ```
 xbindkeys
 synclient TouchpadOff=1
 ```
-
-## TODO
-- include bin in dotfile repo
