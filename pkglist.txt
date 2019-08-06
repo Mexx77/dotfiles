@@ -22,9 +22,11 @@ rxvt-unicode
 stow
 sudo
 thunderbird
+tree
 ttf-dejavu
 ttf-inconsolata
 unzip
+wget
 xf86-video-intel
 xfsprogs
 xmobar
