@@ -11,13 +11,17 @@ pacman -S --needed - < pkglist.txt
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
-## Chrome
+## yay for AUR
 ```
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
-yay google-chrome
 cd .. && rm -rf yay
+```
+
+# AUR packages
+```
+yay --needed -S - < yaylist.txt
 ```
 
 ## German keyboard
@@ -28,18 +32,6 @@ localectl --no-convert set-x11-keymap de pc105 nodeadkeys
 ## awsp AWS profile changer
 ```
 sudo npm install -g awsp
-```
-
-## urxvt font size changer
-```
-yay urxvt-resize-font.git
-```
-
-## wps office
-```
-yay wps-office
-yay wps-office-extension-german-dictionary
-yay ttf-wps-fonts
 ```
 
 ## Optional

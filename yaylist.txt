@@ -1,0 +1,5 @@
+google-cloud-sdk
+wps-office
+ttf-wps-fonts
+wps-office-extension-german-dictionary
+urxvt-resize-font-git
