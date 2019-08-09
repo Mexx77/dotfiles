@@ -2,6 +2,7 @@ alsa-utils
 arandr
 aws-cli
 bind-tools
+chromium
 dmenu
 feh
 fuse2
