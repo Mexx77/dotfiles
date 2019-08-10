@@ -43,7 +43,7 @@ myScreenshot = "screenshot"
 
 -- The command to use as a launcher, to launch commands that don't have
 -- preset keybindings.
-myLauncher = "$(dmenu_run)"
+myLauncher = "dmenu_run_history"
 
 ------------------------------------------------------------------------
 -- Workspaces
@@ -67,7 +67,7 @@ myWorkspaces = ["1:term","2:code","3:web","4:subl","5:media"] ++ map show [6..9]
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "Chromium"       --> doShift "1:term"
+    [ className =? "Chromium"       --> doShift "3:web"
     , className =? "Google-chrome"  --> doShift "3:web"
     , className =? "thunderbird"    --> doShift "5:media"
     , resource  =? "desktop_window" --> doIgnore
