@@ -34,6 +34,12 @@ localectl --no-convert set-x11-keymap de pc105 nodeadkeys
 sudo npm install -g awsp
 ```
 
+## Default screenshot location
+```
+mkdir $HOME/screenshots
+dconf write /org/gnome/gnome-screenshot/auto-save-directory "'file://$HOME/screenshots'"
+```
+
 ## Optional
 ```
 xbindkeys
