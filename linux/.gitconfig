@@ -1,0 +1,11 @@
+[user]
+	email = mb@maxberndt.com
+	name = Max Berndt
+	signingkey = 90F56F9E
+
+[alias]
+l  = log --graph --oneline --decorate --color --pretty=format:'%C(yellow)%h|%Cred%ad|%Cblue%an%Creset%C(auto)%d %s' --date=short
+ll = log --graph --oneline --decorate --color --all --pretty=format:'%C(yellow)%h|%Cred%ad|%Cblue%an%Creset%C(auto)%d %s' --date=short
+
+[gpg]
+	program = gpg2
