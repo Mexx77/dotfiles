@@ -36,10 +36,10 @@ myScreensaver = "physlock"
 
 -- The command to take a selective screenshot, where you select
 -- what you'd like to capture on the screen.
-mySelectScreenshot = "select-screenshot"
+mySelectScreenshot = "gnome-screenshot"
 
 -- The command to take a fullscreen screenshot.
-myScreenshot = "screenshot"
+myScreenshot = "gnome-screenshot -i"
 
 -- The command to use as a launcher, to launch commands that don't have
 -- preset keybindings.
