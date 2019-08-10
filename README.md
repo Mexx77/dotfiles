@@ -1,5 +1,8 @@
-# Max Dotfiles
-This is a collection of configs for my Arch Linux setup.
+# Max dotfiles
+This is a collection of configs for my archlinux setup.
+I use a solarized theme with xmonad, oh-my-zsh and urxvt.
+
+<img src="preview.png" alt="my xmonad archlinux desktop" width="860"/>
 
 ## Packages
 ```
