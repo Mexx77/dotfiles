@@ -29,7 +29,7 @@ import qualified Data.Map        as M
 -- certain contrib modules.
 --
 -- myTerminal = "/usr/bin/gnome-terminal"
-myTerminal = "urxvt"
+myTerminal = "urxvtc"
 
 -- The command to lock the screen or show the screensaver.
 myScreensaver = "physlock"
