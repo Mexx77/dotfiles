@@ -7,6 +7,9 @@ export EDITOR="$VISUAL"
 
 xsetroot -cursor_name left_ptr &
 
+# Set wallpaper
+feh --bg-scale nextCloud/Photos/2016\ Neuseeland/09-Otago/DSC01184.JPG
+
 urxvtd --quiet --opendisplay --fork &
 
 exec xmonad
