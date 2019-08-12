@@ -1,4 +1,3 @@
-! urxvt
 URxvt*buffered: true
 URxvt*cursorBlink: true
 URxvt*underlineColor: yellow
@@ -13,12 +12,8 @@ Urxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 URxvt*saveLines: 50000
 URxvt*termName: rxvt-unicode
 URxvt.perl-ext-common: default,matcher,resize-font
-URxvt.urlLauncher: google-chrome 
+URxvt.url-launcher: /usr/bin/chromium
 URxvt.matcher.button: 1
-!urxvt*transparent: true
-!urxvt*shading: 10
-
-!! drop in Solarized colorscheme for Xresources/Xdefaults
 
 !!SOLARIZED HEX     16/8 TERMCOL  XTERM/HEX   L*A*B      RGB         HSB
 !!--------- ------- ---- -------  ----------- ---------- ----------- -----------
