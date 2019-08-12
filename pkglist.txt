@@ -1,6 +1,7 @@
 alsa-utils
 arandr
 aws-cli
+ccid
 chromium
 dmenu
 feh
@@ -14,6 +15,7 @@ neovim
 networkmanager
 nextcloud-client
 npm
+opensc
 openssh
 physlock
 rsync

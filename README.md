@@ -37,6 +37,12 @@ localectl --no-convert set-x11-keymap de pc105 nodeadkeys
 sudo npm install -g awsp
 ```
 
+## Enable pcscd.service for smartcards
+```
+systemctl enable pcscd.service
+systemctl start  pcscd.service
+```
+
 ## Default screenshot location
 ```
 mkdir $HOME/screenshots
