@@ -32,10 +32,11 @@ yay --needed -S - < yaylist.txt
 localectl --no-convert set-x11-keymap de pc105 nodeadkeys
 ```
 
-## awsp AWS profile changer
+## AWS profile changer
 ```
+# GPG not supported
 sudo npm install -g awsp
-# OR
+# GPG supported
 sudo pip install git+https://github.com/naftulikay/aws-env@v1.1.0
 ```
 
