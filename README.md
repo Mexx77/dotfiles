@@ -35,6 +35,8 @@ localectl --no-convert set-x11-keymap de pc105 nodeadkeys
 ## awsp AWS profile changer
 ```
 sudo npm install -g awsp
+# OR
+sudo pip install git+https://github.com/naftulikay/aws-env@v1.1.0
 ```
 
 ## Enable pcscd.service for smartcards

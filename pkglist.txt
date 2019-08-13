@@ -19,6 +19,7 @@ npm
 opensc
 openssh
 physlock
+python-pip
 rsync
 rxvt-unicode
 stow
