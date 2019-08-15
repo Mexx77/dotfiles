@@ -37,7 +37,7 @@ localectl --no-convert set-x11-keymap de pc105 nodeadkeys
 # GPG not supported
 sudo npm install -g awsp
 # GPG supported
-sudo pip install git+https://github.com/naftulikay/aws-env@v1.1.0
+sudo pip install git+https://github.com/naftulikay/aws-env@v1.2.0
 ```
 
 ## Enable pcscd.service for smartcards
