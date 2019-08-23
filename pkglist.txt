@@ -31,10 +31,12 @@ ttf-inconsolata
 unzip
 wget
 xf86-video-intel
+xclip
 xmobar
 xmonad
 xmonad-contrib
 xorg-server
 xorg-xbacklight
 xorg-xinit
+yubikey-manager
 zsh
