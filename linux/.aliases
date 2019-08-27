@@ -1,6 +1,6 @@
 # Costum
-alias ottovpn="sudo /home/max/ownCloud/VPN/otto/start.sh"
-alias iteratecvpn="sudo /home/max/ownCloud/VPN/iteratec/start.sh"
+alias ottovpn="sudo /home/max/nextCloud/VPN/otto/start.sh"
+alias iteratecvpn="sudo /home/max/nextCloud/VPN/iteratec/start.sh"
 alias yk="ykman oath code | awk '{ print \$2 }' | xclip"
 alias feh="feh --scale-down"
 alias awsp="source _awsp"
