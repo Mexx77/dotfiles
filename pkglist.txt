@@ -1,6 +1,7 @@
 alsa-utils
 arandr
 aws-cli
+bind-tools
 ccid
 chromium
 dmenu
