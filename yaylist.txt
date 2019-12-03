@@ -5,4 +5,3 @@ rmtrash
 ttf-wps-fonts
 urxvt-resize-font-git
 wps-office
-wps-office-extension-german-dictionary
