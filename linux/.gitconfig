@@ -9,3 +9,7 @@ ll = log --graph --oneline --decorate --color --all --pretty=format:'%C(yellow)%
 
 [gpg]
 	program = gpg2
+[http]
+	sslCAInfo = /etc/ca-certificates/trust-source/anchors/jungheinrich-zscaler.crt
+[commit]
+	gpgsign = true
