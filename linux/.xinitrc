@@ -1,7 +1,8 @@
 #!/bin/sh
 # Script to configure X, start common apps, and start xmonad.
 
-export PATH="$PATH:$HOME/.local/bin:$HOME/bin:$HOME/bin-helper"
+export GOPATH="$HOME/go"
+export PATH="$PATH:$HOME/.local/bin:$HOME/bin:$HOME/bin-helper:$GOPATH/bin"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
