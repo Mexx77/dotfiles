@@ -21,6 +21,7 @@ nextcloud-client
 npm
 opensc
 openssh
+pass
 physlock
 python-pip
 rsync

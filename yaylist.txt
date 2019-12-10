@@ -1,3 +1,4 @@
+aws-vault
 google-cloud-sdk
 neovim-nerdtree
 postman

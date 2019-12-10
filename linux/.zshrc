@@ -119,3 +119,6 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 aws-set-profile() {
   $(aws-env $1)
 }
+
+# aws-vault
+export AWS_VAULT_BACKEND=pass
