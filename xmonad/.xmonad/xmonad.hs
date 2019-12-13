@@ -1,6 +1,6 @@
--- xmonad config used by Vic Fryzel
--- Author: Vic Fryzel
--- http://github.com/vicfryzel/xmonad-config
+-- xmonad config by Max Berndt
+-- http://github.com/Mexx77/dotfiles
+-- Origin: http://github.com/vicfryzel/xmonad-config
 
 import System.IO
 import System.Exit
@@ -49,7 +49,7 @@ myLauncher = "dmenu_run_history"
 -- Workspaces
 -- The default number of workspaces (virtual screens) and their names.
 --
-myWorkspaces = ["1:term","2:code","3:web","4:subl","5:media"] ++ map show [6..9]
+myWorkspaces = ["1:term","2:code","3:web","4:ide","5:media"] ++ map show [6..9]
 
 
 ------------------------------------------------------------------------
