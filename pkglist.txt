@@ -12,8 +12,8 @@ gnome-screenshot
 gnupg
 htop
 jq
-kubectl
 libu2f-host
+man-db
 nemo
 neovim
 networkmanager
@@ -24,7 +24,6 @@ openssh
 pass
 physlock
 python-pip
-rsync
 rxvt-unicode
 stow
 sudo
