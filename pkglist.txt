@@ -41,5 +41,6 @@ xmonad-contrib
 xorg-server
 xorg-xbacklight
 xorg-xinit
+yubico-pam
 yubikey-manager
 zsh
