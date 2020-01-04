@@ -1,5 +1,6 @@
 aws-vault
 google-cloud-sdk
+jetbrains-toolbox
 neovim-nerdtree
 postman
 rmtrash

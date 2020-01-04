@@ -27,6 +27,7 @@ python-pip
 rxvt-unicode
 stow
 sudo
+terraform
 thunderbird
 tree
 ttf-dejavu
