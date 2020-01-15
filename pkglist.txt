@@ -23,6 +23,7 @@ opensc
 openssh
 pass
 physlock
+pinta
 python-pip
 rxvt-unicode
 stow
