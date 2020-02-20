@@ -12,6 +12,8 @@ xrdb -merge ~/.Xdefaults &
 # Set wallpaper
 feh --bg-scale ~/nextCloud/Photos/0000\ Stock/arch-bridge-clouds-814499.jpg &
 
+teams &
+
 urxvtd --quiet --opendisplay --fork &
 
 exec xmonad

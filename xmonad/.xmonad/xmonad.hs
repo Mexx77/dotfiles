@@ -67,18 +67,18 @@ myWorkspaces = ["1:term","2:code","3:web","4:ide","5:media"] ++ map show [6..9]
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "Chromium"         --> doShift "3:web"
-    , className =? "Google-chrome"    --> doShift "3:web"
-    , className =? "thunderbird"      --> doShift "5:media"
-    , resource  =? "desktop_window"   --> doIgnore
-    , className =? "Gnome-calculator" --> doFloat
-    , className =? "Steam"            --> doFloat
-    , className =? "Gimp"             --> doFloat
-    , resource  =? "gpicview"         --> doFloat
-    , className =? "MPlayer"          --> doFloat
-    , className =? "VirtualBox"       --> doShift "4:vm"
-    , className =? "Spotify"          --> doShift "5:media"
-    , className =? "stalonetray"      --> doIgnore
+    [ className =? "Chromium"                   --> doShift "3:web"
+    , className =? "Google-chrome"              --> doShift "3:web"
+    , className =? "thunderbird"                --> doShift "5:media"
+    , resource  =? "desktop_window"             --> doIgnore
+    , className =? "Gnome-calculator"           --> doFloat
+    , className =? "Microsoft Teams - Preview"  --> doShift "1:term"
+    , className =? "Gimp"                       --> doFloat
+    , resource  =? "gpicview"                   --> doFloat
+    , className =? "MPlayer"                    --> doFloat
+    , className =? "VirtualBox"                 --> doShift "4:vm"
+    , className =? "Spotify"                    --> doShift "5:media"
+    , className =? "stalonetray"                --> doIgnore
     , isFullscreen --> (doF W.focusDown <+> doFullFloat)]
 
 
