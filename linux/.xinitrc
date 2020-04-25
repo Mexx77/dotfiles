@@ -10,7 +10,7 @@ xsetroot -cursor_name left_ptr &
 xrdb -merge ~/.Xdefaults &
 
 # Set wallpaper
-feh --bg-scale ~/nextCloud/Photos/0000\ Stock/arch-bridge-clouds-814499.jpg &
+feh --bg-center ~/nextCloud/Photos/0000\ Stock/meghan-markle-suits.jpg &
 
 teams &
 
