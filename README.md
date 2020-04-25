@@ -52,6 +52,13 @@ mkdir $HOME/screenshots
 dconf write /org/gnome/gnome-screenshot/auto-save-directory "'file://$HOME/screenshots'"
 ```
 
+## Setup symbolic links
+Clone dotfiles to home folder && cd dotfiles
+```
+stow xmonad
+stow linux
+```
+
 ## Optional
 ```
 xbindkeys
