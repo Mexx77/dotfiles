@@ -1,5 +1,6 @@
 alsa-utils
 arandr
+autorandr
 aws-cli
 bind-tools
 ccid
