@@ -9,7 +9,8 @@ export EDITOR="$VISUAL"
 xsetroot -cursor_name left_ptr &
 xrdb -merge ~/.Xdefaults &
 
-# Set wallpaper
+# screenlayout and wallpaper
+autorandr --change
 feh --bg-center ~/nextCloud/Photos/0000\ Stock/meghan-markle-suits.jpg &
 
 teams &
