@@ -4,7 +4,7 @@
 
 import System.IO
 import System.Exit
-import XMonad
+import XMonad hiding ( (|||) )
 import XMonad.Actions.PhysicalScreens
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -12,9 +12,7 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
-import XMonad.Layout.Spiral
-import XMonad.Layout.Tabbed
-import XMonad.Layout.ThreeColumns
+import XMonad.Layout.LayoutCombinators
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Util.WorkspaceCompare(getXineramaPhysicalWsCompare, mkWsSort, WorkspaceSort)
@@ -100,8 +98,8 @@ myManageHook = composeAll
 -- ThreeColMid 1 (3/100) (1/2))
 
 myLayout = avoidStruts (
-    Tall 1 (3/100) (1/2) |||
     noBorders Full |||
+    Tall 1 (3/100) (1/2) |||
     Tall 1 (3/100) (4/5))
 
 ------------------------------------------------------------------------
@@ -110,16 +108,6 @@ myLayout = avoidStruts (
 --
 myNormalBorderColor  = "#073642"
 myFocusedBorderColor = "#657b83"
-
--- Colors for text and backgrounds of each tab when in "Tabbed" layout.
-tabConfig = def {
-    activeBorderColor = "#7C7C7C",
-    activeTextColor = "#CEFFAC",
-    activeColor = "#000000",
-    inactiveBorderColor = "#7C7C7C",
-    inactiveTextColor = "#EEEEEE",
-    inactiveColor = "#000000"
-}
 
 -- Color of current window title in xmobar.
 xmobarTitleColor = "#FFB6B0"
@@ -216,8 +204,12 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
      kill)
 
   -- Cycle through the available layout algorithms.
-  , ((modMask, xK_space),
+  , ((modMask, xK_v),
      sendMessage NextLayout)
+  
+  -- Jump to specific layout (Full)
+  , ((modMask, xK_space),
+     sendMessage $ JumpToLayout "Full")
 
   --  Reset the layouts on the current workspace to default.
   , ((modMask .|. shiftMask, xK_space),
