@@ -101,7 +101,8 @@ myManageHook = composeAll
 
 myLayout = avoidStruts (
     Tall 1 (3/100) (1/2) |||
-    noBorders Full)
+    noBorders Full |||
+    Tall 1 (3/100) (4/5))
 
 ------------------------------------------------------------------------
 -- Colors and borders
