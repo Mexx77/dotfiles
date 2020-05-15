@@ -11,7 +11,7 @@ xrdb -merge ~/.Xdefaults &
 
 # screenlayout and wallpaper
 autorandr --change
-feh --bg-center ~/nextCloud/Photos/0000\ Stock/meghan-markle-suits.jpg &
+feh --bg-center ~/nextCloud/Photos/0000\ Stock/meghan-markle-suits.jpg --image-bg "#002b36" &
 
 teams &
 
