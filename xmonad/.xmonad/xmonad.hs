@@ -4,7 +4,7 @@
 
 import System.IO
 import System.Exit
-import XMonad hiding ( (|||) )
+import XMonad
 import XMonad.Actions.PhysicalScreens
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
@@ -12,7 +12,7 @@ import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.SetWMName
 import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
-import XMonad.Layout.LayoutCombinators
+import XMonad.Layout.ToggleLayouts
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import XMonad.Util.WorkspaceCompare(getXineramaPhysicalWsCompare, mkWsSort, WorkspaceSort)
@@ -98,9 +98,8 @@ myManageHook = composeAll
 -- ThreeColMid 1 (3/100) (1/2))
 
 myLayout = avoidStruts (
-    noBorders Full |||
-    Tall 1 (3/100) (1/2) |||
-    Tall 1 (3/100) (4/5))
+    toggleLayouts (noBorders Full) (Tall 1 (3/100) (1/2)) |||
+    toggleLayouts (noBorders Full) (Tall 1 (3/100) (4/5)))
 
 ------------------------------------------------------------------------
 -- Colors and borders
@@ -209,7 +208,7 @@ myKeys conf@(XConfig {XMonad.modMask = modMask}) = M.fromList $
   
   -- Jump to specific layout (Full)
   , ((modMask, xK_space),
-     sendMessage $ JumpToLayout "Full")
+     sendMessage $ Toggle "Full")
 
   --  Reset the layouts on the current workspace to default.
   , ((modMask .|. shiftMask, xK_space),
