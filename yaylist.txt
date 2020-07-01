@@ -1,5 +1,4 @@
 aws-vault
-google-cloud-sdk
 jetbrains-toolbox
 neovim-nerdtree
 pinta
