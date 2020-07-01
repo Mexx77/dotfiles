@@ -2,6 +2,7 @@ aws-vault
 google-cloud-sdk
 jetbrains-toolbox
 neovim-nerdtree
+pinta
 postman
 rmtrash
 ttf-wps-fonts
