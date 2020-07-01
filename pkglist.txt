@@ -26,6 +26,7 @@ pass
 physlock
 python-pip
 rxvt-unicode
+sshuttle
 stow
 sudo
 terraform
