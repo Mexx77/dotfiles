@@ -1,7 +1,6 @@
 alsa-utils
 arandr
 autorandr
-aws-cli
 bind-tools
 ccid
 chromium
@@ -30,7 +29,6 @@ sshuttle
 stow
 sudo
 terraform
-thunderbird
 tree
 ttf-dejavu
 ttf-inconsolata

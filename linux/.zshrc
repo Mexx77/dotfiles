@@ -102,7 +102,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source $HOME/.aliases
-source /usr/bin/aws_zsh_completer.sh
+
+autoload bashcompinit && bashcompinit
+complete -C '/usr/bin/aws_completer' aws
 
 # Hide default username
 DEFAULT_USER=max

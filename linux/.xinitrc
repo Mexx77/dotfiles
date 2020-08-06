@@ -13,8 +13,10 @@ xrdb -merge ~/.Xdefaults &
 autorandr --change
 feh --bg-center ~/nextCloud/Photos/0000\ Stock/meghan-markle-suits.jpg --image-bg "#002b36" &
 
-teams &
+# teams &
 
 urxvtd --quiet --opendisplay --fork &
+
+~/bin-helper/curl-contains &
 
 exec xmonad

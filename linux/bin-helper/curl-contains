@@ -1,0 +1,6 @@
+if curl -s https://moinzukunft.hamburg/lastenrad-programm/ | grep -q "Spätsommer"
+then
+    echo "Spätsommer still in https://moinzukunft.hamburg/lastenrad-programm/"
+else
+    chromium "Spätsommer not in https://moinzukunft.hamburg/lastenrad-programm/"
+fi
