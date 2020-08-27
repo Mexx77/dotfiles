@@ -1,5 +1,6 @@
 aws-cli-v2-bin
 aws-vault
+imlib2-heic
 jetbrains-toolbox
 neovim-nerdtree
 pinta

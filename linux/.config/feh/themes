@@ -1,0 +1,7 @@
+feh --scale-down \
+    --image-bg black \
+    --sort filename \
+    --auto-rotate
+
+other-theme
+    --conversion-timeout 10
