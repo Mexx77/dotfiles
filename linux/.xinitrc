@@ -18,6 +18,4 @@ idea &
 
 urxvtd --quiet --opendisplay --fork &
 
-~/bin-helper/curl-contains &
-
 exec xmonad
