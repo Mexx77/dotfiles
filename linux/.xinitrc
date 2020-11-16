@@ -13,8 +13,9 @@ xrdb -merge ~/.Xdefaults &
 autorandr --change
 feh --bg-center ~/nextCloud/Photos/0000\ Stock/meghan-markle-suits.jpg --image-bg "#002b36" &
 
-# teams &
 idea &
+
+phonesim -p 12345 /usr/share/phonesim/default.xml &
 
 urxvtd --quiet --opendisplay --fork &
 

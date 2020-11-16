@@ -1,0 +1,74 @@
+#!/usr/bin/env bash
+
+# follow steps described in the wiki:
+# https://wiki.archlinux.org/index.php/bluetooth_headset#HFP_not_working_with_PulseAudio
+# enable and start bluetooth service
+# enable and start pulseaudio service
+# auto power bluetooth adapter at boot time in the file
+# /etc/bluetooth/main.conf:
+# ------------------------
+# [Policy]
+# AutoEnable=true
+
+headset_mac="AC:90:85:00:8C:61"
+# 38:18:4C:12:57:C2 WH-1000XM3
+
+function get_headphones_index() {
+  echo $(pacmd list-cards | grep bluez_card -B1 | grep index | awk '{print $2}')
+}
+
+function set_headphones_profile_headset() {
+  pacmd set-card-profile $(get_headphones_index) headset_head_unit
+}
+
+function power_fake_modem() {
+  dbus-send --print-reply --system --dest=org.ofono /phonesim org.ofono.Modem.SetProperty string:"Powered" variant:boolean:true
+  dbus-send --print-reply --system --dest=org.ofono /phonesim org.ofono.Modem.SetProperty string:"Online" variant:boolean:true
+}
+
+function connect_initially() {
+  power_fake_modem
+  echo "connecting headset $headset_mac initially. Disconnecting first..."
+  echo -e "disconnect ${headset_mac}\n quit" | bluetoothctl
+  sleep 4s
+  reconnect
+}
+
+function reconnect() {
+  echo "reconnecting headset $headset_mac"
+  echo -e "connect ${headset_mac}\n quit" | bluetoothctl
+  sleep 6s
+  set_headphones_profile_headset
+}
+
+function reconnect_teams() {
+  killall teams
+  reconnect
+  teams &
+}
+
+function check_pulseaudio() {
+  echo "checking if pulseaudio daemon is running"
+  pulseaudio --check
+  if [ $? -gt 0 ]; then
+    echo "pulseaudio daemon not running. Starting it with 'pulseaudio -D'..."
+    pulseaudio -D
+    sleep 1s
+  fi
+}
+
+function main() {
+  check_pulseaudio
+  local action=${1:-connect_initially}
+  if [ $action = "connect_initially" ]; then
+    connect_initially
+  elif [ $action = "reconnect-teams" ]; then
+    reconnect_teams
+  elif [ $action = "set-profile" ]; then
+    set_headphones_profile_headset
+  else
+    reconnect
+  fi
+}
+
+main $1
