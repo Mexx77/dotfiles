@@ -116,7 +116,7 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
   export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
 export GPG_TTY=$(tty)
-gpg-connect-agent updatestartuptty /bye >/dev/null
+echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
 
 aws-set-profile() {
   $(aws-env $1)
