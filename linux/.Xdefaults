@@ -67,7 +67,7 @@ URxvt.matcher.button: 1
 
 !! green dark/light
 *color2:                S_green
-*color10:               S_base01
+*color10:               S_cyan
 
 !! yellow dark/light
 *color3:                S_yellow
