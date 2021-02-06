@@ -11,9 +11,11 @@ xrdb -merge ~/.Xdefaults
 
 # screenlayout and wallpaper
 autorandr --change
-feh --bg-center ~/nextCloud/Photos/0000\ Stock/meghan-markle-suits.jpg --image-bg "#002b36"
+feh --bg-center ~/nextCloud/Photos/0000\ Stock/harvey-michael.jpg --image-bg "#002b36"
 
-idea &
+if [[ ! -z "$idea" ]]; then
+  idea &
+fi
 
 phonesim -p 12345 /usr/share/phonesim/default.xml &
 
