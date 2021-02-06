@@ -10,15 +10,21 @@
 # [Policy]
 # AutoEnable=true
 
-headset_mac="AC:90:85:00:8C:61"
-# 38:18:4C:12:57:C2 WH-1000XM3
+declare -A headsets=(
+  ["jabra"]="30:50:75:4F:FE:F4"
+  ["airpods"]="AC:90:85:00:8C:61"
+  ["sony"]="38:18:4C:12:57:C2"
+)
+
+headset="${HEADSET:-jabra}"
+headset_mac="${headsets[$headset]}"
 
 function get_headphones_index() {
-  echo $(pacmd list-cards | grep bluez_card -B1 | grep index | awk '{print $2}')
+  pacmd list-cards | grep bluez_card -B1 | grep index | awk '{print $2}'
 }
 
 function set_headphones_profile_headset() {
-  pacmd set-card-profile $(get_headphones_index) headset_head_unit
+  pacmd set-card-profile "$(get_headphones_index)" headset_head_unit
 }
 
 function power_fake_modem() {
@@ -59,12 +65,12 @@ function check_pulseaudio() {
 
 function main() {
   check_pulseaudio
-  local action=${1:-connect_initially}
-  if [ $action = "connect_initially" ]; then
+  local action=${1:-reconnect}
+  if [ "$action" = "connect_initially" ]; then
     connect_initially
-  elif [ $action = "reconnect-teams" ]; then
+  elif [ "$action" = "reconnect-teams" ]; then
     reconnect_teams
-  elif [ $action = "set-profile" ]; then
+  elif [ "$action" = "set-profile" ]; then
     set_headphones_profile_headset
   else
     reconnect
