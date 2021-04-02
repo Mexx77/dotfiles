@@ -65,7 +65,7 @@ myWorkspaces = ["1:term","2:code","3:web","4:ide","5:media"] ++ map show [6..9]
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "Chromium"                   --> doShift "3:web"
+    [ className =? "firefox"                    --> doShift "3:web"
     , className =? "jetbrains-idea"             --> doShift "4:ide"
     , className =? "thunderbird"                --> doShift "5:media"
     , resource  =? "desktop_window"             --> doIgnore

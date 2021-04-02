@@ -14,17 +14,26 @@ declare -A headsets=(
   ["jabra"]="30:50:75:4F:FE:F4"
   ["airpods"]="AC:90:85:00:8C:61"
   ["sony"]="38:18:4C:12:57:C2"
+  ["jbl"]="FC:A8:9A:FE:53:BE"
+)
+
+declare -A profiles=(
+  ["jabra"]="headset_head_unit"
+  ["airpods"]="headset_head_unit"
+  ["sony"]="a2dp_sink"
+  ["jbl"]="a2dp_sink"
 )
 
 headset="${HEADSET:-jabra}"
 headset_mac="${headsets[$headset]}"
+profile="${profiles[$headset]}"
 
 function get_headphones_index() {
   pacmd list-cards | grep bluez_card -B1 | grep index | awk '{print $2}'
 }
 
-function set_headphones_profile_headset() {
-  pacmd set-card-profile "$(get_headphones_index)" headset_head_unit
+function set_profile() {
+  pacmd set-card-profile "$(get_headphones_index)" $profile
 }
 
 function power_fake_modem() {
@@ -44,7 +53,7 @@ function reconnect() {
   echo "reconnecting headset $headset_mac"
   echo -e "connect ${headset_mac}\n quit" | bluetoothctl
   sleep 6s
-  set_headphones_profile_headset
+  set_profile
 }
 
 function reconnect_teams() {
@@ -71,7 +80,7 @@ function main() {
   elif [ "$action" = "reconnect-teams" ]; then
     reconnect_teams
   elif [ "$action" = "set-profile" ]; then
-    set_headphones_profile_headset
+    set_profile
   else
     reconnect
   fi

@@ -11,7 +11,7 @@ xrdb -merge ~/.Xdefaults
 
 # screenlayout and wallpaper
 autorandr --change
-feh --bg-center ~/nextCloud/Photos/0000\ Stock/harvey-michael.jpg --image-bg "#002b36"
+feh --bg-center ~/nextCloud/Photos/0000\ Stock/donna-harvey.jpg --image-bg "#002b36"
 
 if [[ ! -z "$idea" ]]; then
   idea &
