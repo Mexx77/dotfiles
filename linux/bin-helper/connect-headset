@@ -21,7 +21,7 @@ declare -A profiles=(
   ["jabra"]="headset_head_unit"
   ["airpods"]="headset_head_unit"
   ["sony"]="a2dp_sink"
-  ["jbl"]="a2dp_sink"
+  ["jbl"]="headset_head_unit"
 )
 
 headset="${HEADSET:-jabra}"
@@ -33,7 +33,7 @@ function get_headphones_index() {
 }
 
 function set_profile() {
-  pacmd set-card-profile "$(get_headphones_index)" $profile
+  pacmd set-card-profile "$(get_headphones_index)" "${PROFILE:-$profile}"
 }
 
 function power_fake_modem() {
