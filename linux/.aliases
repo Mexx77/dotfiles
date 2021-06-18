@@ -1,6 +1,6 @@
 # Costum
 alias jhvpn="sudo /home/max/nextCloud/VPN/jh/start.sh"
-alias yk="ykman oath code | awk '{ print \$2 }' | xclip -selection clipboard"
+alias yk="ykman oath accounts code | awk '{ print \$2 }' | xclip -selection clipboard"
 alias feh="feh --scale-down"
 alias v="nvim"
 alias rm="echo Use 'rmtrash', or the full path i.e. '/usr/bin/rm'"
