@@ -124,3 +124,7 @@ aws-set-profile() {
 
 # aws-vault
 export AWS_VAULT_BACKEND=pass
+
+if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+  startx
+fi
