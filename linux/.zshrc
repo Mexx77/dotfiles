@@ -122,6 +122,9 @@ aws-set-profile() {
   $(aws-env $1)
 }
 
+# node version manager
+source /usr/share/nvm/init-nvm.sh
+
 # aws-vault
 export AWS_VAULT_BACKEND=pass
 
