@@ -71,7 +71,7 @@ ZSH_DISABLE_COMPFIX=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker kubectl)
+plugins=(git docker z kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,6 +124,10 @@ aws-set-profile() {
 
 # node version manager
 source /usr/share/nvm/init-nvm.sh
+
+#fuzzy search
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # aws-vault
 export AWS_VAULT_BACKEND=pass

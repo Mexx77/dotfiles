@@ -11,3 +11,5 @@ ll = log --graph --oneline --decorate --color --all --pretty=format:'%C(yellow)%
 	program = gpg2
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = master
