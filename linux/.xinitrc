@@ -2,7 +2,7 @@
 # Script to configure X, start common apps, and start xmonad.
 
 export GOPATH="$HOME/go"
-export PATH="$PATH:$HOME/.local/bin:$HOME/bin:$HOME/bin-helper:$GOPATH/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/bin:$HOME/bin-helper:$GOPATH/bin:$HOME/.pub-cache/bin"
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
@@ -11,7 +11,7 @@ xrdb -merge ~/.Xdefaults
 
 # screenlayout and wallpaper
 autorandr --change
-feh --bg-scale ~/nextCloud/Photos/0000\ Stock/aerial-view-beach-beautiful-462162.jpg --image-bg "#002b36"
+feh --bg-center ~/nextCloud/Photos/0000\ Stock/tree-house.jpg --image-bg "#0D1611"
 
 if [[ ! -z "$idea" ]]; then
   idea &

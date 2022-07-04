@@ -13,3 +13,7 @@ ll = log --graph --oneline --decorate --color --all --pretty=format:'%C(yellow)%
 	gpgsign = true
 [init]
 	defaultBranch = master
+[safe]
+	directory = /opt/flutter
+[core]
+	autocrlf = input
