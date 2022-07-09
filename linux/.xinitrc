@@ -17,7 +17,7 @@ if [[ ! -z "$idea" ]]; then
   idea &
 fi
 
-phonesim -p 12345 /usr/share/phonesim/default.xml &
+nextcloud &
 
 urxvtd --quiet --opendisplay --fork &
 

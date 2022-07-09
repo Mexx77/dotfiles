@@ -36,13 +36,7 @@ function set_profile() {
   pacmd set-card-profile "$(get_headphones_index)" "${PROFILE:-$profile}"
 }
 
-function power_fake_modem() {
-  dbus-send --print-reply --system --dest=org.ofono /phonesim org.ofono.Modem.SetProperty string:"Powered" variant:boolean:true
-  dbus-send --print-reply --system --dest=org.ofono /phonesim org.ofono.Modem.SetProperty string:"Online" variant:boolean:true
-}
-
 function connect_initially() {
-  power_fake_modem
   echo "connecting headset $headset_mac initially. Disconnecting first..."
   echo -e "disconnect ${headset_mac}\n quit" | bluetoothctl
   sleep 4s
