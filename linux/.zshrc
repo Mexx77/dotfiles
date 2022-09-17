@@ -123,7 +123,7 @@ aws-set-profile() {
 }
 
 # node version manager
-source /usr/share/nvm/init-nvm.sh
+#source /usr/share/nvm/init-nvm.sh
 
 #fuzzy search
 source /usr/share/fzf/key-bindings.zsh

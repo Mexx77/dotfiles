@@ -12,6 +12,7 @@ gnome-screenshot
 gnupg
 htop
 jq
+krita
 libu2f-host
 man-db
 nemo
