@@ -17,6 +17,8 @@ if [[ ! -z "$idea" ]]; then
   idea &
 fi
 
+dbus-update-activation-environment --all
+gnome-keyring-daemon --start --components=secrets
 nextcloud &
 
 urxvtd --quiet --opendisplay --fork &

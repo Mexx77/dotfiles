@@ -8,6 +8,7 @@ dmenu
 feh
 git
 gnome-calculator
+gnome-keyring
 gnome-screenshot
 gnupg
 htop
